@@ -1,0 +1,183 @@
+/* Root definitions for color and reusability */
+:root {
+    --primary-color: #274472;
+    --secondary-color: #4CAF50;
+    --highlight-color: #DAA520;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --card-background: #E3E4DB;
+    --button-hover-color: #45a049;
+    --dark-background: #121212;
+    --dark-card-background: #424242;
+    --dark-button-background: #616161;
+    --dark-button-hover: #757575;
+    --dark-text-color: #e1e1e1;
+}
+
+/* Base and reset styles */
+body, h1, div, span, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+header, footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Typography with golden ratio for font scaling */
+h1 {
+    font-size: calc(16px * 1.618);
+    color: var(--primary-color);
+    margin-bottom: 0.618em;
+}
+
+/* Game board styles */
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: calc(100vh - 40px);
+    width: 90%;
+}
+
+/* Card styles incorporating flip animation */
+.card {
+    perspective: 1000px;
+    width: calc((100vh - 40px) / 5);
+    height: calc((100vh - 40px) / 5 * 1.618);
+    background-color: var(--card-background);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card .front, .card .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card .front {
+    background: #fff; /* Front face styling */
+}
+
+.card .back {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Score panel styling */
+#scorePanel {
+    font-size: 16px;
+    color: #606E8C;
+}
+
+span#attempts, span#matches {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Accessibility focus styles */
+button:focus, .card:focus .card-inner {
+    outline: none;
+    border: 3px solid var(--highlight-color);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .game-board {
+        width: 100%;
+        padding: 10px;
+    }
+    .card {
+        width: calc((100vw - 60px) / 3);
+        height: calc(((100vw - 60px) / 3) * 1.618);
+    }
+    h1 {
+        font-size: calc(14px * 1.618);
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .game-board {
+    background-color: #333;
+}
+
+body.dark-mode .card {
+    background-color: var(--dark-card-background);
+}
+
+body.dark-mode button {
+    background-color: var(--dark-button-background);
+}
+
+body.dark-mode button:hover {
+    background-color: var(--dark-button-hover);
+}
+
+body.dark-mode header {
+    color: #ffffff;
+}
