@@ -1,0 +1,61 @@
+/* instructions.css */
+
+/* Instructions Overlay */
+#instructions-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+    z-index: 999; /* Ensure it covers everything else */
+    justify-content: center;
+    align-items: center;
+    display: flex; /* Center the box */
+}
+
+/* Instructions Box */
+#instructions-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Instructions Header */
+#instructions-box h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Instructions Text */
+#instructions-box p {
+    font-size: 1.2rem;
+    color: #34495e;
+    text-align: left;
+}
+
+/* Close Button */
+#close-instructions-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#close-instructions-btn:hover {
+    background-color: #2980b9;
+}
+
+#close-instructions-btn:active {
+    background-color: #1c5985;
+}

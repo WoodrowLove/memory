@@ -1,0 +1,56 @@
+/* board.css */
+
+/* Game Board Container */
+#game-board {
+    background-color: #ecf0f1; /* Soft white to keep focus on the cards */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Flexibility for grid layout */
+    grid-gap: 15px; /* Space between cards */
+    justify-content: center;
+    align-content: center;
+    width: max-content; /* Ensures board resizes based on content */
+    margin: 0 auto; /* Center the board on the screen */
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #bdc3c7; /* Neutral base color */
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth flipping and shadow transitions */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover for emphasis */
+    transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+.card img {
+    display: none; /* Hidden initially */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card.flipped img {
+    display: block; /* Show image when flipped */
+}
+
+/* for Small Screens */
+@media (max-width: 600px) {
+    #game-board {
+        grid-template-columns: repeat(3, 1fr); /* Adjust the grid for smaller screens */
+        grid-gap: 10px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+}

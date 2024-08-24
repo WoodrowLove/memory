@@ -3,31 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Play Memory Match – a fun and challenging game to test your memory skills!">
-    <title>Memory Match Game</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="assets/images/card1.png" as="image">
-    <link rel="preload" href="assets/images/card2.png" as="image">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/outcome.css">
+    <link rel="stylesheet" href="css/instructions.css"> 
 </head>
 <body>
     <header>
-        <h1>Memory Match</h1>
-        <div id="scorePanel">
-            <span>Attempts: <span id="attempts">0</span></span>
-            <span>Matches: <span id="matches">0</span></span>
-        </div>
+        <h1>Memory Card Game</h1>
     </header>
 
-    <section id="gameBoard" class="game-board">
-        <!-- Cards will be dynamically generated in this section -->
-    </section>
+    <main>
+        <div id="game-board"></div>
+    </main>
+
+    <aside id="controls">
+        <button id="reveal-shuffle-btn">Reveal</button>
+        <button id="instructions-btn">Instructions</button>
+        <div id="turn-counter">Turns: 0</div>
+    </aside>
+
+    <div id="game-over-overlay"></div>
+    
+    <div id="outcome-message">
+        <h2>Game Over</h2>
+        <p>You've matched all the cards!</p>
+        <button id="restart-game-btn">Play Again</button>
+        <button id="exit-game-btn">Exit</button>
+    </div>
+
+    <div id="instructions-overlay">
+        <div id="instructions-box">
+            <h2>How to Play</h2>
+            <p>
+                Welcome to the Memory Card Game! Here's how to play:
+                <ul>
+                    <li>Press the "Reveal" button to reveal the cards briefly.</li>
+                    <li>Click on any two cards to try and find the matching pair.</li>
+                    <li>If you find the matching pair on the first attempt, you win!</li>
+                    <li>If you don't match the pair after 2 attempts, you'll lose and have a chance to try again.</li>
+                    <li>You can press "Reveal" only twice per round.</li>
+                    <li>Enjoy yourself!.</li>
+                </ul>
+            </p>
+            <button id="close-instructions-btn">Close</button>
+        </div>
+    </div>
 
     <footer>
-        <button id="restartButton" aria-label="Restart the game">Restart Game</button>
+        <p>Memory Card Game - Let's challenge your memory!</p>
     </footer>
 
-    <script src="js/utils.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/ui.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/card.js"></script>
+    <script type="module" src="js/game.js"></script>
+    <script type="module" src="js/outcome.js"></script>
+    <script type="module" src="js/instructions.js"></script>
 </body>
 </html>

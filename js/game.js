@@ -1,20 +1,25 @@
-// Array to hold card images
-const cardsArray = [
-    { name: 'card1', img: 'assets/images/card1.png'},
-    { name: 'card2', img: 'assets/images/card2.png'},
-    // Add other card images as needed
-];
+// game.js
 
-// Duplicate the cards array to create a match for each card
-let gameGrid = cardsArray.concat(cardsArray);
+// Import necessary functions from other files
+import { initializeCards } from './card.js';
+import { resetGame, revealAndShuffle } from './outcome.js';
 
-// Game variables
-let firstGuess = '';
-let secondGuess = '';
-let count = 0;
-let previousTarget = null;
-let delay = 1200;
-let gameBoard = document.getElementById('gameBoard');
-let matches = 0;
-let attempts = 0;
-let totalPairs = gameGrid.length / 2;
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize the game board when the DOM is fully loaded
+    initializeGame();
+
+    // Set up event listeners for control buttons
+    document.getElementById('reveal-shuffle-btn').addEventListener('click', revealAndShuffle);
+});
+
+function initializeGame() {
+    // Clear the game board
+    const gameBoard = document.getElementById('game-board');
+    gameBoard.innerHTML = '';
+
+    // Initialize cards and shuffle them
+    initializeCards(gameBoard);
+
+    // Additional game state setup can go here
+    // e.g., setting a turn counter, timer, etc.
+}
