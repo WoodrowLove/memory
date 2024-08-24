@@ -13,7 +13,7 @@ The Memory Card Game is inspired by classic memory matching games that have been
 ## Getting Started
 
 ### Link to Deployed Game:
-[Play Memory Card Game](https://your-deployed-game-link.com) <!-- Replace with the actual deployed link -->
+[Play Memory Card Game](https://woodrowlove.github.io/memory/)
 
 ### Instructions:
 1. **Reveal & Shuffle**: Press the "Reveal & Shuffle" button to reveal the cards briefly and then shuffle them back to a facedown position.
@@ -48,9 +48,3 @@ Here are some planned future enhancements for the Memory Card Game:
 - **Theming Options**: Allow players to choose different themes for the cards and background.
 
 ---
-
-### Notes:
-
-- Replace placeholder links with actual URLs specific to your project.
-- Add a screenshot or logo where indicated to visually represent your game.
-- If any section (like Attributions) is not applicable, you can remove it.
