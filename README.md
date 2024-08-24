@@ -1,6 +1,4 @@
-# Memory Card Game
-
-![Memory Card Game Screenshot](assets/images/screenshot.png) <!-- Replace with your actual screenshot or logo path -->
+# Memory Card Game 
 
 ## Game Name: Memory Card Game
 
@@ -16,10 +14,10 @@ The Memory Card Game is inspired by classic memory matching games that have been
 [Play Memory Card Game](https://woodrowlove.github.io/memory/)
 
 ### Instructions:
-1. **Reveal & Shuffle**: Press the "Reveal & Shuffle" button to reveal the cards briefly and then shuffle them back to a facedown position.
+1. **Reveal & Shuffle**: Press the "Reveal" button to reveal the cards briefly and then shuffle them back to a facedown position.
 2. **Match the Pair**: Click on two cards to try and find the matching pair. You have one attempt to win the game.
 3. **Win or Lose**: If you find the correct matching pair on your first attempt, you win! If not, you’ll see a message encouraging you to try again.
-4. **Limited Attempts**: You can only press the "Reveal & Shuffle" button twice per round. Exceeding this will trigger a message, and you’ll have to try again in the next round.
+4. **Limited Attempts**: You can only press the "Reveal" button twice per round. Exceeding this will trigger a message, and you’ll have to try again in the next round.
 5. **Instructions**: Click the "Instructions" button at any time to review the rules and gameplay.
 
 ### Planning Materials:
